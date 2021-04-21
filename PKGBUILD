@@ -51,11 +51,11 @@ prepare() {
   cd ghidra
 
   # Copy needed libraries into a flat repo
-  mkdir -p flatRepo
+  mkdir -p dependencies/flatRepo
   cp ../dex2jar-$_d2j/lib/dex-*.jar \
     ../AXMLPrinter2.jar \
     ../hfsx/lib/{csframework,hfsx*,iharder-base64}.jar \
-    flatRepo
+    dependencies/flatRepo
   cp ../yajsw-stable-$_yajsw.zip Ghidra/Features/GhidraServer
 
   # YAJSW expects this symlink
